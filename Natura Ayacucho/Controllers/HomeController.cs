@@ -14,7 +14,7 @@ namespace Natura_Ayacucho.Controllers
             return View();
         }
 
-        public ActionResult Buscar()
+        public ActionResult Buscar(string id="")
         {
             return View();
         }

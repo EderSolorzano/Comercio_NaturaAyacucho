@@ -180,18 +180,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contacto</a></li>
+                                   
                                 </ul>
+                                
                             </div>
+                          
                             <!--/.navbar-collapse-->
                         </nav>
                         <!--/.navbar-->
+                    
                     </div>
-                </div>
-                <div class="header-right">
-                    <div class="search">
+                    </div>
+                                 <div class="header-right">
+                                     
+                                      @*<div class="search">
                         <div class="search-text">
                             <input class="serch" type="text" value="Buscar" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" />
                         </div>
+                        
+                        </div>*@
                         <div class="cart box_1">
                             <a href="checkout.html">
                                 <h3>
@@ -206,9 +213,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="head-signin">
                             <h5><a href="login.html"><i class="hd-dign"></i>Iniciar sesión</a></h5>
                         </div>
+                                     <!-- Search form empieza aqui codigo mixto (copiado y adecuado)-->
+
+                                     <div>
+                                         <form class="navbar-form pull-right" action="@Url.Action("Buscar","Home")" @*<--enviar toda esta informacion a esta ruta,
+                                         "accion","controlador", parametro "text" caja de texto id *@ method="get" />
+                                         <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                         <input type="text" class="span1" value ="Buscar un producto" onfocus="this.value = '';" name="id" id="navSearchInput" />
+                                         </form>
+                                     </div>
+
+                                     <!--Search form termina aqui-->
                         <div class="clearfix"> </div>
                     </div>
                 </div>
+                
+                
+
                 <div class="clearfix"> </div>
             </div>
         </div>
