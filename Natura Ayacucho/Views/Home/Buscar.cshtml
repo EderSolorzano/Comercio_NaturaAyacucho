@@ -165,10 +165,14 @@
 @foreach (var item in Model)
 //hacer un bucle a una lista en este caso al modelo que es una lista de productos
 {
+
+    var imagen = @item.ProductoImagen.FirstOrDefault();
+    string img = imagen == null ? "sin-stock.jpg" : imagen.Imagen;
+
     <div class="row products-category">
         <div class="product-layout product-list col-xs-12">
             <div class="product-thumb">
-                <div class="image"><a href="product.html"><img src="~/images/b1.jpg" alt=" Strategies for Acquiring Your Own Laptop " title=" Strategies for Acquiring Your Own Laptop " class="img-responsive" /></a></div>
+                <div class="image"><a href="product.html"><img src="~/ImgProductos/@img" alt="Strategies for Acquiring Your Own Laptop " title="Strategies for Acquiring Your Own Laptop " class="img-responsive" /></a></div>
                 <div>
                     <div class="caption">
                         <h4><a href="product.html"> @item.Denominacion </a></h4>
@@ -187,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-layout product-list col-xs-12">
+        @*<div class="product-layout product-list col-xs-12">*@
             @*<div class="product-thumb">
                 <div class="image"><a href="product.html"><img src="image/product/nikon_d300_1-200x200.jpg" alt="Digital Camera for Elderly" title="Digital Camera for Elderly" class="img-responsive" /></a></div>
                 <div>
@@ -419,7 +423,7 @@
                     </div>
                 </div>
             </div>*@
-        </div>
+        @*</div>*@
     </div>
 }
     <div class="row">

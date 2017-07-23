@@ -182,9 +182,29 @@
     <Content Include="js\imagezoom.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
     <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\jquery.form.min.js" />
     <Content Include="js\jquery.jscrollpane.min.js" />
     <Content Include="js\move-top.js" />
     <Content Include="js\simpleCart.min.js" />
+    <Content Include="Logos\Amis_femenina_labial_fresa_todo.jpg" />
+    <Content Include="Logos\Biografia_femenina_desperte.jpg" />
+    <Content Include="Logos\facebook.png" />
+    <Content Include="Logos\Faces_intensa_femenina.jpg" />
+    <Content Include="Logos\google_plus.png" />
+    <Content Include="Logos\Homen.jpg" />
+    <Content Include="Logos\Ilia_natura.jpg" />
+    <Content Include="Logos\instagram.png" />
+    <Content Include="Logos\Kaiak_urbe_solito.jpg" />
+    <Content Include="Logos\logo icono.ico" />
+    <Content Include="Logos\logo.jpg" />
+    <Content Include="Logos\maquilla_una.jpg" />
+    <Content Include="Logos\pinterest.png" />
+    <Content Include="Logos\rss.png" />
+    <Content Include="Logos\twitter.png" />
+    <Content Include="Logos\urbano.jpg" />
+    <Content Include="Logos\urbano_1.jpg" />
+    <Content Include="Logos\Urbano_2.jpg" />
+    <Content Include="Logos\youtube.png" />
     <Content Include="Models\ModelTienda.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelTienda.edmx</DependentUpon>
@@ -197,16 +217,19 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\admin\Views\Producto\Adjuntos.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="sin-stock.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\ProductoController.cs" />
+    <Compile Include="Areas\admin\Models\ResponseModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -284,7 +307,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\admin\Models\" />
+    <Folder Include="ImgProductos\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -20,8 +20,8 @@ namespace Natura_Ayacucho.Controllers
         {
             //logica de acceso para bd
             var productos = bd.Producto
-                .Where(x => x.Denominacion.Contains(id))
-                .Take(20)
+                .Where(x => x.Denominacion.Contains(id))// x.Descripcion.Contains(id))
+               .Take(20)
                 .ToList();
             ViewBag.clave = id;
             return View(productos);
