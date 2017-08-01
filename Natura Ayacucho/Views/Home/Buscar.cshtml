@@ -4,9 +4,9 @@
 <div id="content" class="col-sm-12">
     <h1> <span class="light">HAS BUSCADO: </span>&quot;@ViewBag.clave&quot;</h1>
     <div class="row">
-        <div class="col-sm-4">
+        @*<div class="col-sm-4">
             <input type="text" class="form-control" placeholder="Escribe aquí" value="" name="search">
-        </div>
+        </div>*@
         <div class="col-sm-3">
             <select class="form-control" name="category_id">
                 <option value="0">Todas las categorías</option>
@@ -172,23 +172,24 @@
     <div class="row products-category">
         <div class="product-layout product-list col-xs-12">
             <div class="product-thumb">
-                <div class="image"><a href="product.html"><img src="~/ImgProductos/@img" alt="Strategies for Acquiring Your Own Laptop " title="Strategies for Acquiring Your Own Laptop " class="img-responsive" /></a></div>
+                <div class="img-overlay">
+
+                    <a onclick="AgregarCarrito(@item.ProductoId, '@item.Denominacion', '@img', @item.Precio)" class="btn buy btn-danger" href="#" onClick="">Agregar al carrito</a>
+
+                </div>
+                <div class="image"><a href="product.html"><img src="~/ImgProductos/@img" alt="@item.Descripcion" title="@item.Denominacion" class="img-responsive" /></a></div>
                 <div>
                     <div class="caption">
                         <h4><a href="product.html"> @item.Denominacion </a></h4>
+                        
                         <p class="description">
                             @item.Descripcion
                         </p>
-                        <p class="price"> <span class="price-new">S/. @item.Precio</span> <span class="price-old">S/. @item.Precio</span> <span class="saving">-15% de descuento</span> <span class="price-tax">Ex Tax: S/. @item.Precio</span> </p>
+
+                        <p class="price"> <span class="price-new">S/. @item.Precio</span> <span class="saving">-15% de descuento</span></p>
                     </div>
-                    <div class="button-group">
-                        <button class="btn-primary" type="button" onClick=""><span>Agregar al carrito</span></button>
-                        @*<div class="add-to-links">
-                            <button type="button" data-toggle="tooltip" title="Add to Wish List" onClick=""><i class="fa fa-heart"></i> <span>Add to Wish List</span></button>
-                            <button type="button" data-toggle="tooltip" title="Compare this Product" onClick=""><i class="fa fa-exchange"></i> <span>Compare this Product</span></button>
-                        </div>*@
+                    
                     </div>
-                </div>
             </div>
         </div>
         @*<div class="product-layout product-list col-xs-12">*@

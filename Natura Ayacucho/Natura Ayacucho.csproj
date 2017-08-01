@@ -177,6 +177,7 @@
     <Content Include="images\signin.png" />
     <Content Include="images\tick.png" />
     <Content Include="images\w2.png" />
+    <Content Include="ImgProductos\sin-stock.jpg" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\easing.js" />
     <Content Include="js\imagezoom.js" />
@@ -188,6 +189,7 @@
     <Content Include="js\simpleCart.min.js" />
     <Content Include="Logos\Amis_femenina_labial_fresa_todo.jpg" />
     <Content Include="Logos\Biografia_femenina_desperte.jpg" />
+    <Content Include="Logos\descuentos.jpg" />
     <Content Include="Logos\facebook.png" />
     <Content Include="Logos\Faces_intensa_femenina.jpg" />
     <Content Include="Logos\google_plus.png" />
@@ -198,7 +200,10 @@
     <Content Include="Logos\logo icono.ico" />
     <Content Include="Logos\logo.jpg" />
     <Content Include="Logos\maquilla_una.jpg" />
+    <Content Include="Logos\ofertas.jpg" />
+    <Content Include="Logos\otras noticias.jpg" />
     <Content Include="Logos\pinterest.png" />
+    <Content Include="Logos\promociones.jpg" />
     <Content Include="Logos\rss.png" />
     <Content Include="Logos\twitter.png" />
     <Content Include="Logos\urbano.jpg" />
@@ -221,6 +226,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.form.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="sin-stock.jpg" />
     <Content Include="Web.config" />
@@ -230,6 +236,7 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\ProductoController.cs" />
     <Compile Include="Areas\admin\Models\ResponseModel.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -299,6 +306,10 @@
     <Content Include="Areas\admin\Views\Producto\Edit.cshtml" />
     <Content Include="Areas\admin\Views\Producto\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Compra\Paso1.cshtml" />
+    <Content Include="Views\Compra\Paso2.cshtml" />
+    <Content Include="Views\Compra\Paso4.cshtml" />
+    <Content Include="Views\Compra\Paso3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -306,9 +317,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ImgProductos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

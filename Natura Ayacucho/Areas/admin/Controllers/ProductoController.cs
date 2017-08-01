@@ -15,13 +15,13 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
     {
         private TiendaEntities1 db = new TiendaEntities1();
 
-        // GET: admin/Productos
+        // GET: admin/Producto
         public ActionResult Index()
         {
             return View(db.Producto.ToList());
         }
 
-        // GET: admin/Productoes/Details/5
+        // GET: admin/Producto/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
             return View(producto);
         }
 
-        // GET: admin/Productoes/Create
+        // GET: admin/Producto/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: admin/Productoes/Create
+        // POST: admin/Producto/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
             return View(producto);
         }
 
-        // GET: admin/Productoes/Edit/5
+        // GET: admin/Producto/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
             return View(producto);
         }
 
-        // POST: admin/Productoes/Edit/5
+        // POST: admin/Producto/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
             return View(producto);
         }
 
-        // GET: admin/Productoes/Delete/5
+        // GET: admin/Producto/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace Natura_Ayacucho.Areas.admin.Controllers
             return View(producto);
         }
 
-        // POST: admin/Productoes/Delete/5
+        // POST: admin/Producto/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -134,10 +134,13 @@ Titulo = "Ejemplo", Descripcion = "Ejemplo" });
 db.SaveChanges();
 }
 else
-{
+            { 
 respuesta.respuesta = false;
 respuesta.error = "Debe adjuntar un documento";
-} return Json(respuesta);
+            }
+
+
+            return Json(respuesta);
 }
 
 public PartialViewResult Adjuntos(int ProductoId)

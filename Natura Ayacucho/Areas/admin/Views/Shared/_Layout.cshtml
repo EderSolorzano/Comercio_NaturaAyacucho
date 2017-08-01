@@ -33,9 +33,13 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+    
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    @RenderSection("scripts", required: false)
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/jquery.form.min.js"></script>
+    <script src="~/js/jquery.form.min.js"></script>
+    @RenderSection("scripts",false)
 </body>
 </html>

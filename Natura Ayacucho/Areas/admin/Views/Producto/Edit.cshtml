@@ -66,14 +66,16 @@
             </div>
         </div>
     }
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    
+    
 </div>
     <div class="col-md-6">
 @if (Model.ProductoId > 0)
 {
-    using (Html.BeginForm("Adjuntar", "Producto", FormMethod.Post, new { id = "frm - adjuntar"}))
+    using (Html.BeginForm("Adjuntar", "Producto", FormMethod.Post, new { id = "frm-adjuntar"}))
 {
     <input type = "hidden" name = "ProductoId" value = "@Model.ProductoId" />
     //name con ese nombre llega al servidor. es importante

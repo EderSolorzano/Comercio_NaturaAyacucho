@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;
+}
+@*esto es para quitar la cabecera*@
+<html class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/Logos/logo icono.ico" rel="icon" />
+    <title>PASO 4/4</title>
+    <meta name="description" content="Responsive and clean html template design for any kind of ecommerce webshop">
+    <!-- CSS Part Start-->
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Custom Theme files -->
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Hind:400,500,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- CSS Part End-->
+</head>
+<body class="checkout-page">
+    <div class="navbar-brand logo">
+        <a href="index.html"><img src="~/Logos/logo.jpg" alt=""></a>
+        <label>NATURA AYACUCHO</label>
+    </div>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><i class="fa fa-shopping-cart"></i>Resumen del carrito de compras</h4>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td class="text-center">Imagen</td>
+                            <td class="text-left">Producto</td>
+                            <td class="text-left">Cantidad</td>
+                            <td class="text-right">Precio unitario</td>
+                            <td class="text-right">Total</td>
+                        </tr>
+                    </thead>
+                    <tbody id="itemcarrito"></tbody>
+                    <tr>
+                    <td></td><td></td>
+                    <td class="stronger">Total:</td>
+                    <td class="stronger"><div id="totalCompra" class="size-16 align-right">S/. 0.00</div></td>
+                    </tr>
+                    
+                    <tfoot>
+                        <tr>
+                            <td class="text-right" colspan="4"><strong>Sub-Total:</strong></td>
+                            <td class="text-right">S/. 0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="4"><strong>Gastos de envío:</strong></td>
+                            <td class="text-right">S/. 0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="4"><strong>Envuelto como regalo:</strong></td>
+                            <td class="text-right">S/. 5.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="4"><strong>Impuesto incluídos:</strong></td>
+                            <td class="text-right">S/. 0.00</td>
+                        </tr>
+                       
+                        <tr>
+                            <td class="text-right" colspan="4"><strong>Total:</strong></td>
+                            <td class="text-right">S/. 0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr />
+                <div class="pull-right">
+                    <input type="button" class="btn btn-primary" id="btnConfirmar" value="CONFIRMAR ORDEN">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        $(function () {
+            var carrito = localStorage.getItem("carrito");
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+                CargarProductos(productos);
+            }
+            $("#btnConfirmar").click(function () {
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    url: '@Url.Action("RealizarPedido","Compra")',
+                    data: carrito,
+                    success: function () {
+                        localStorage.removeItem("carrito");
+                        window.location = '@Url.Action("Index","Home")';
+                    }
+                });
+            });
+
+        });
+
+
+function CargarProductos(productos) {
+    var html = '';
+var total = 0;
+$.each(productos, function () {
+total += this.Precio * this.Cantidad
+html += '<tr>' +
+'<td class="image"><img src="~/ImgProductos/' + this.Imagen +
+'" alt="" width="124" height="124" /> </td>' +
+'<td class="desc">' + this.Denominacion + ' &nbsp; </td>' +
+'<td class="qty">' +
+' ' + this.Cantidad + 
+'</td>' +
+'<td class="price">S/. ' + this.Precio + '</td>' +
+'</tr>'
+});
+$('#itemcarrito').html(html);
+$("#totalCompra").text('S/. ' + total);
+}
+
+    </script>
+</body>
+</html>
