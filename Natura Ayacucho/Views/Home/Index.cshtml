@@ -1,9 +1,9 @@
-﻿<!--banner strat here-->
+﻿<!--banner start here-->
 <div class="banner">
     <div class="container">
         <div class="banner-main">
             <div class="col-md-6 banner-left">
-                <a href="single.html"><img src="~/Logos/urbano.jpg" alt="" class="img-responsive"></a>
+                <a href='@Url.Action("Productos", "Home")'><img src="~/Logos/urbano.jpg" alt="" class="img-responsive"></a>
             </div>
             <div class="col-md-6 banner-right simpleCart_shelfItem">
                 <span class="bann-heart"> </span>
@@ -12,8 +12,8 @@
                 <h6>Despierta tu mirada</h6>
                 <h5 class="item_price">S/. 109.00</h5>
                 <ul class="bann-small-img">
-                    <li><a href="single.html"><img src="~/Logos/urbano_1.jpg"></a></li>
-                    <li><a href="single.html"><img src="~/Logos/Urbano_2.jpg"></a></li>
+                    <li><a href='@Url.Action("Productos", "Home")'><img src="~/Logos/urbano_1.jpg"></a></li>
+                    <li><a href='@Url.Action("Productos", "Home")'><img src="~/Logos/Urbano_2.jpg"></a></li>
                 </ul>
                 <h6>Modelos</h6>
                 <ul class="bann-btns">
@@ -25,7 +25,7 @@
                             @*<option value="audi">Large</option>*@
                         </select>
                     </li>
-                    <li><a href="#" class="item_add">Agregar al carrito</a></li>
+                    <li><a href='@Url.Action("Productos", "Home")' class="item_add">Ver producto</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -74,14 +74,14 @@
                 </ul>
             </div>
             <div class="col-md-4 blc-layer3-grids2">
-                <a href="single.html"><img src="~/Logos/Homen.jpg" alt=""></a>
+                <a href='@Url.Action("Productos", "Home")'><img src="~/Logos/Homen.jpg" alt=""></a>
             </div>
             <div class="col-md-4 blc-layer3-grids-3 simpleCart_shelfItem">
                 <div class="box-grid">
-                    <h3><a href="single.html">AMIS</a></h3>
+                    <h3><a href='@Url.Action("Productos", "Home")'>AMIS</a></h3>
                     <p>Más que amigas</p>
                     <h5>AMIS. Lo mejor de la vida. Balm y labial</h5>
-                    <a href="single.html"><img src="~/Logos/Amis_femenina_labial_fresa_todo.jpg" alt=""></a>
+                    <a href='@Url.Action("Productos", "Home")'><img src="~/Logos/Amis_femenina_labial_fresa_todo.jpg" alt=""></a>
                     <div class="box-grid-price">
                         <div class="box-grid-price-left">
                             <h4>En Stock</h4>
@@ -99,8 +99,8 @@
                                 <option value="audi">Uva</option>
                             </select>
                         </li>
-                        <li><a href="#" class="item_add">Agregar al carrito</a></li>
-                    </ul>
+                        <li><a href='@Url.Action("Productos", "Home")' class="item_add">Ver producto</a></li>
+                     </ul>
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -118,7 +118,7 @@
                         <a href="product.html"><img src="~/Logos/Ilia_natura.jpg" alt="" class="img-responsive zoom-img"></a>
                     </div>
                     <div class="home-product-bottom">
-                        <h3><a href="single.html">Compra Inteligente</a></h3>
+                        <h3><a href='@Url.Action("Productos", "Home")'>Compra Inteligente</a></h3>
                         <p>Explora ahora</p>
                     </div>
                     <div class="srch">
@@ -132,7 +132,7 @@
                         <a href="product.html"><img src="~/Logos/Faces_intensa_femenina.jpg" alt="" class="img-responsive zoom-img"></a>
                     </div>
                     <div class="home-product-bottom">
-                        <h3><a href="single.html">Compra Inteligente</a></h3>
+                        <h3><a href='@Url.Action("Productos", "Home")'>Compra Inteligente</a></h3>
                         <p>Explora ahora</p>
                     </div>
                     <div class="srch">
@@ -146,7 +146,7 @@
                         <a href="product.html"><img src="~/Logos/Biografia_femenina_desperte.jpg" alt="" class="img-responsive zoom-img"></a>
                     </div>
                     <div class="home-product-bottom">
-                        <h3><a href="single.html">Compra Inteligente</a></h3>
+                        <h3><a href='@Url.Action("Productos", "Home")'>Compra Inteligente</a></h3>
                         <p>Explora ahora</p>
                     </div>
                     <div class="srch">
@@ -160,7 +160,7 @@
                         <a href="product.html"><img src="~/Logos/Kaiak_urbe_solito.jpg" alt="" class="img-responsive zoom-img"></a>
                     </div>
                     <div class="home-product-bottom">
-                        <h3><a href="single.html">Compra inteligente</a></h3>
+                        <h3><a href='@Url.Action("Productos", "Home")'>Compra inteligente</a></h3>
                         <p>Explora ahora</p>
                     </div>
                     <div class="srch">
@@ -174,3 +174,68 @@
 </div>
 <!--home block end here-->
 
+<!--CONFIGURACION DEL BOTON AGREGAR AL CARRITO-->
+<script>
+        $(function () {
+            var carrito = localStorage.getItem("carrito");
+            //Todo lo que esta en carrito guarda a la variable carrito
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+                CargaCarrito(productos);
+            }
+        });
+
+        function CargaCarrito(productos) {
+            var html = '';
+            var total = 0;
+            $("#nroProductosCarrito").text('(' + productos.length + ')');
+            //length cuantos productos hay en la lista y lo muestra en nro productos carrito
+            $.each(productos, function () {
+                total += this.Precio * this.Cantidad
+                //cantidad x total para sacar el total
+                html += '<div class="item-in-cart clearfix">' +
+                '<div class="image">' +
+                '<img src="/ImgProductos/' + this.Imagen + '"width="124" height="124" alt="cart item" />' +
+                '</div>' +
+                '<div class="desc">' +
+                '<strong><a href="product.html">' + this.Denominacion + '</a></strong>' +
+                '<span class="light-clr qty"> Cant.: ' + this.Cantidad + '&nbsp;' +
+                '<a href="#" class="icon-remove-sign" title="Remove Item"></a>' +
+                '</span>' +
+                '</div>' +
+                '<div class="price">' +
+                '<strong>S/. ' + this.Precio + '</strong>' +
+                '</div>' +
+                '</div>';
+            });
+            $('#itemcarrito').html(html);
+            $("#totalCompraCarrito,#totalCarrito").text('S/. ' + total);
+        }
+
+        function AgregarCarrito(productoid, denominacion, imagen, precio) {
+            var carrito = localStorage.getItem("carrito");
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+            }
+            var itemActual;
+            for (var i = 0; i < productos.length; i++) {
+                if (productos[i].ProductoId == productoid) {
+                    itemActual = productos[i];
+                }
+            }
+            if (!itemActual) {
+                productos.push({ ProductoId: productoid, Denominacion: denominacion, Precio: precio,
+                    Cantidad: 1, Imagen: imagen });
+            } else {
+                itemActual.Cantidad++;
+                //si es nuevo producto se agrega, si ya existe se agrega solo cantidad
+            }
+            var jsonStr = JSON.stringify(productos);
+            localStorage.setItem("carrito", jsonStr);
+            CargaCarrito(productos);
+            //localstorage solo acepta cadenas de tipo json no guarda objetos
+        }
+        
+</script>

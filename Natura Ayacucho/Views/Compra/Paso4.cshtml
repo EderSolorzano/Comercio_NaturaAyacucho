@@ -76,7 +76,8 @@
                 </table>
                 <hr />
                 <div class="pull-right">
-                    <input type="button" class="btn btn-primary" id="btnConfirmar" value="CONFIRMAR ORDEN">
+                    <a href='@Url.Action("Index","Home")' input type="button" class="btn btn-primary" id="btnConfirmar">CONFIRMAR ORDEN </a>
+                   
                 </div>
             </div>
         </div>
@@ -84,7 +85,7 @@
 </div>
 
 
-    <script>
+    @*<script>
         $(function () {
             var carrito = localStorage.getItem("carrito");
             var productos = [];
@@ -128,6 +129,6 @@ $('#itemcarrito').html(html);
 $("#totalCompra").text('S/. ' + total);
 }
 
-    </script>
+    </script>*@
 </body>
 </html>

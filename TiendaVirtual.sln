@@ -26,6 +26,48 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PLANTILLA FINAL V3", "..\..
 		SlnRelativePath = "..\..\..\Documents\Visual Studio 2015\Projects\PLANTILLA FINAL V3\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "marketshop3", "..\..\..\Desktop\marketshop3\", "{92C88758-4A0B-48D3-A6DF-19D4F4B4544D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_11176"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\marketshop3\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11176\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_11176"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\marketshop3\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11176\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "11176"
+		SlnRelativePath = "..\..\..\Desktop\marketshop3\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Plantilla profe", "..\..\..\Desktop\Plantilla profe\", "{88220672-87E5-4EE2-A8A6-CF593512F5C3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10465"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\Plantilla profe\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10465\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10465"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\Plantilla profe\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10465\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "10465"
+		SlnRelativePath = "..\..\..\Desktop\Plantilla profe\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +82,14 @@ Global
 		{6FB6A7C2-4F84-4251-B94F-F9A48DA79E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB6A7C2-4F84-4251-B94F-F9A48DA79E40}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FB6A7C2-4F84-4251-B94F-F9A48DA79E40}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{92C88758-4A0B-48D3-A6DF-19D4F4B4544D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C88758-4A0B-48D3-A6DF-19D4F4B4544D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C88758-4A0B-48D3-A6DF-19D4F4B4544D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C88758-4A0B-48D3-A6DF-19D4F4B4544D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{88220672-87E5-4EE2-A8A6-CF593512F5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88220672-87E5-4EE2-A8A6-CF593512F5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88220672-87E5-4EE2-A8A6-CF593512F5C3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{88220672-87E5-4EE2-A8A6-CF593512F5C3}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

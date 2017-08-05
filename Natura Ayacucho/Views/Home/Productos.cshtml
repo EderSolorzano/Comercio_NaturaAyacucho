@@ -1,0 +1,208 @@
+﻿@model List<Natura_Ayacucho.Models.Producto>
+
+
+<!--product start here-->
+<div class="product">
+    <div class="container">
+        <div class="product-main">
+            <div class="product-menu-bar">
+                <div class="col-md-3 prdt-right">
+                    <div class="w_sidebar">
+                        <section class="sky-form">
+                            <h1>Categorías</h1>
+                            <div class="row1 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Todas</label>
+                                </div>
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Varón</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Mujer</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Maquillaje</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sky-form">
+                            <h2>Marcas</h2>
+                            <div class="row1 row2 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Todas</label>
+                                </div>
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Águas</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Amis</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Amó</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Aquarela</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Biografía</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Chronos</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Creer para ver</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ekos</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Erva doce</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Essencial</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Esta flor</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Faces</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fotoequilibrio</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Higeia</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Homem</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Humor</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ilia</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kaiak</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kriska</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Luna</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Mamá y bebé</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nature</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Plant</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Seve</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sr N</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tez</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tododía</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Una</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Urbano</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sky-form">
+                            <h4>Descuentos</h4>
+                            <div class="row1 row2 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="radio"><input type="radio" name="radio" checked=""><i></i>50+ %</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>40+ %</label>
+                                </div>
+                                <div class="col col-4">
+                                    <label class="radio"><input type="radio" name="radio"><i></i>30+ %</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>20+ %</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>10+ %</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sky-form">
+                            <h4>Precios</h4>
+                            <div class="row1 row2 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="radio"><input type="radio" name="radio" checked=""><i></i>S/. 120 +</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>S/. 90 +</label>
+                                </div>
+                                <div class="col col-4">
+                                    <label class="radio"><input type="radio" name="radio"><i></i>S/. 70 +</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>S/. 50 +</label>
+                                    <label class="radio"><input type="radio" name="radio"><i></i>S/. 20 +</label>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            @foreach (var item in Model)
+            //hacer un bucle a una lista en este caso al modelo que es una lista de productos
+            {
+
+                var imagen = @item.ProductoImagen.FirstOrDefault();
+                string img = imagen == null ? "sin-stock.jpg" : imagen.Imagen;
+
+                <div class="col-md-4 home-grid">
+                    <div class="home-product-main">
+                        <div class="home-product-top">
+                            <div class="row products-category">
+                                @*<div class="product-layout product-list col-xs-12">*@
+                                <div class="product-thumb">
+                                    <div class="img-overlay">
+
+                                        <a onclick="AgregarCarrito(@item.ProductoId, '@item.Denominacion', '@img', @item.Precio)" class="btn buy btn-danger" href="#" onClick="">Agregar al carrito</a>
+
+                                    </div>
+                                    <div class="image"><a href="product.html"><img width="300" height="300" src="~/ImgProductos/@img" alt="@item.Descripcion" title="@item.Denominacion" class="img-responsive" /></a></div>
+                                    <div>
+                                        <div class="caption">
+                                            <h4><a href="product.html"> @item.Denominacion </a></h4>
+                                            <p class="price"> <span class="price-new">S/. @item.Precio</span> </p>
+                                            <p class="description">
+                                                @item.Descripcion
+                                            </p>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                //</div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--product end here-->
+<!--CONFIGURACION DEL BOTON AGREGAR AL CARRITO-->
+@*<script>
+    $(function () {
+        var carrito = localStorage.geta("carrito");
+        //Todo lo que esta en carrito guarda a la variable carrito
+        var productos = [];
+        if (carrito != null) {
+            productos = JSON.parse(carrito);
+            CargaCarrito(productos);
+        }
+    });
+
+    function CargaCarrito(productos) {
+        var html = '';
+        var total = 0;
+        $("#nroProductosCarrito").text('(' + productos.length + ')');
+        //length cuantos productos hay en la lista y lo muestra en nro productos carrito
+        $.each(productos, function () {
+            total += this.Precio * this.Cantidad
+            //cantidad x total para sacar el total
+            html += '<div class="a-in-cart clearfix">' +
+            '<div class="image">' +
+            '<img src="/ImgProductos/' + this.Imagen + '"width="124" height="124" alt="cart a" />' +
+            '</div>' +
+            '<div class="desc">' +
+            '<strong><a href="product.html">' + this.Denominacion + '</a></strong>' +
+            '<span class="light-clr qty"> Cant.: ' + this.Cantidad + '&nbsp;' +
+            '<a href="#" class="icon-remove-sign" title="Remove a"></a>' +
+            '</span>' +
+            '</div>' +
+            '<div class="price">' +
+            '<strong>S/. ' + this.Precio + '</strong>' +
+            '</div>' +
+            '</div>';
+        });
+        $('#acarrito').html(html);
+        $("#totalCompraCarrito,#totalCarrito").text('S/. ' + total);
+    }
+    function AgregarCarrito(productoid, denominacion, imagen, precio) {
+        var carrito = localStorage.geta("carrito");
+        var productos = [];
+        if (carrito != null) {
+            productos = JSON.parse(carrito);
+        }
+        var aActual;
+        for (var i = 0; i < productos.length; i++) {
+            if (productos[i].ProductoId == productoid) {
+                aActual = productos[i];
+            }
+        }
+        if (!aActual) {
+            productos.push({
+                ProductoId: productoid, Denominacion: denominacion, Precio: precio,
+                Cantidad: 1, Imagen: imagen
+            });
+        } else {
+            aActual.Cantidad++;
+            //si es nuevo producto se agrega, si ya existe se agrega solo cantidad
+        }
+        var jsonStr = JSON.stringify(productos);
+        localStorage.seta("carrito", jsonStr);
+        CargaCarrito(productos);
+        //localstorage solo acepta cadenas de tipo json no guarda objetos
+    }
+
+</script>*@

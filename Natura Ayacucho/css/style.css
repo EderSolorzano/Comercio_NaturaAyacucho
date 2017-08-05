@@ -87,6 +87,13 @@ a:hover {
     display: inline-block;
     vertical-align: text-top;
 }
+.head-signin i.add-dign {
+    background: url(../images/add.png)no-repeat;
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: text-top;
+}
 /*--navg--*/
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #FFF;
@@ -152,7 +159,7 @@ nav.navbar.navbar-default {
 		font-size: .5em;
 		padding: 10px;
 		background: #fff;
-		color: #333;
+		color: #333;  /*333*/
 		vertical-align: top;
 	}
 	.content.title .back-to-article {
@@ -176,7 +183,7 @@ nav.navbar.navbar-default {
 		background: #000;
 	}
 	.content.black p {
-		color: #999;
+		color: #999; /*999*/
 	}
 	.content.black p a {
 		color: #08c;
@@ -302,7 +309,7 @@ span.bann-heart {
     width: 50px;
     height: 50px;
     display: block;
-    border: 2px solid #fff;
+    border: 2px solid #fff;     /*cambiooo fff*/
     margin-bottom: 2em;
 }
 .banner-right h2 {
@@ -1568,9 +1575,9 @@ span.checkbox1 {
 }
 .login-left input[type="text"] {
     font-size: 1em;
-    color: #999;
+    color: #999; /*999*/
     padding: 0.5em 1em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; /*ccc*/
     display: block;
     border-top: none;
     border-left: none;
@@ -1581,7 +1588,7 @@ span.checkbox1 {
 }
 .login-left input[type="password"] {
     font-size: 1em;
-    color: #ccc;
+    color: #ccc; /*ccc*/
     padding: 0.5em 1em;
     border-bottom: 1px solid #ccc;
     border-top: none;
@@ -1613,7 +1620,7 @@ span.checkbox1 {
 .login-right p {
     font-size: 1em;
     line-height: 1.8em;
-    color: #999;
+    color: #999; /*999*/
     margin-bottom: 1em;
 }
 .login-right a {
@@ -2838,3 +2845,158 @@ h3.typo1 {
 }		
 }
 /*--media quiries end here--*/
+
+
+
+
+
+
+
+/* #####################################################################
+   #
+   #   Project       : Modal Login with jQuery Effects
+   #   Author        : Rodrigo Amarante (rodrigockamarante)
+   #   Version       : 1.0
+   #   Created       : 07/28/2015
+   #   Last Change   : 08/02/2015
+   #
+   ##################################################################### */
+   
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#login-modal .modal-dialog {
+    width: 350px;
+}
+
+#login-modal input[type=text], input[type=password] {
+	margin-top: 10px;
+}
+
+#div-login-msg,
+#div-lost-msg,
+#div-register-msg {
+    color: #fff;
+    border: 1px solid #EA572D; /*dadfe1*/
+    height: 30px;
+    line-height: 28px;
+    transition: all ease-in-out 500ms;
+}
+
+#div-login-msg.success,
+#div-lost-msg.success,
+#div-register-msg.success {
+    border: 1px solid #68c3a3; 
+    background-color: #c8f7c5; 
+}
+
+#div-login-msg.error,
+#div-lost-msg.error,
+#div-register-msg.error {
+    border: 1px solid #eb575b;
+    background-color: #ffcad1;
+}
+
+#icon-login-msg,
+#icon-lost-msg,
+#icon-register-msg {
+    width: 30px;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+    background-color: #EA572D; /*dadfe1*/
+    margin-right: 5px;
+    transition: all ease-in-out 500ms;
+}
+
+#icon-login-msg.success,
+#icon-lost-msg.success,
+#icon-register-msg.success {
+    background-color: #68c3a3 !important;
+}
+
+#icon-login-msg.error,
+#icon-lost-msg.error,
+#icon-register-msg.error {
+    background-color: #eb575b !important;
+}
+
+#img_logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .8;
+}
+
+.modal-content {
+    background-color: #ececec; /*ececec*/
+    border: 1px solid #bdc3c7;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px 15px 5px 15px;
+}
+
+.modal-footer {
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border-top: 0px;
+}
+
+.checkbox {
+    margin-bottom: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 0px;
+}
+
+.btn-link {
+    padding: 5px 10px 0px 0px;
+    color: #95a5a6;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
+}

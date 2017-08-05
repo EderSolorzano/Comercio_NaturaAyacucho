@@ -108,9 +108,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flexslider.css" />
+    <Content Include="css\main.css" />
     <Content Include="css\style.css" />
+    <Content Include="css\stylesheet.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\add.png" />
     <Content Include="images\arrow.png" />
     <Content Include="images\b1.jpg" />
     <Content Include="images\b2.jpg" />
@@ -228,8 +231,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.form.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="sin-stock.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -241,6 +245,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Models\Cliente.cs">
       <DependentUpon>ModelTienda.tt</DependentUpon>
     </Compile>
@@ -285,7 +290,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Home\Buscar.cshtml" />
     <Content Include="Views\Home\Contacto.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Sesion.cshtml" />
     <Content Include="Views\Home\Boletin.cshtml" />
     <Content Include="Views\Home\Registrarse.cshtml" />
     <Content Include="Views\Home\Terminos.cshtml" />
@@ -310,6 +315,7 @@
     <Content Include="Views\Compra\Paso2.cshtml" />
     <Content Include="Views\Compra\Paso4.cshtml" />
     <Content Include="Views\Compra\Paso3.cshtml" />
+    <Content Include="Views\Home\Productos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

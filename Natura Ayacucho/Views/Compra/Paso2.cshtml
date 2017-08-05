@@ -26,95 +26,102 @@
         <a href="index.html"><img src="~/Logos/logo.jpg" alt=""></a>
         <label>NATURA AYACUCHO</label>
     </div>
-<div class="col-sm-8">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title"><i class="fa fa-truck"></i>METODO DE ENTREGA</h4>
-                </div>
-                <div class="panel-body">
-                    <p>El envío es totalmente gratis en la dirección acordada</p>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" checked="checked" name="Envío gratis">
-                            ENVIO GRATIS - S/. 0.00
-                        </label>
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-truck"></i>METODO DE ENTREGA</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>El envío es totalmente gratis en la dirección acordada</p>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" checked="checked" name="Envío gratis">
+                                        ENVIO GRATIS - S/. 0.00
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-credit-card"></i>METODO DE PAGO</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>Seleccione el método que Ud. prefiera.</p>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" checked="checked" name="Contraentrega">
+                                        Contra entrega
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="Bank Transfer">
+                                        Transferencia bancaria
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="Paypal">
+                                        Paypal
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-ticket"></i>Si cuenta con un código de cupón de descuento adicional</h4>
+                            </div>
+                            <div class="panel-body">
+                                <label for="input-coupon" class="col-sm-3 control-label">Ingrese código de cupón</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="input-coupon" @*placeholder="Enter your coupon here"*@ value="" name="coupon">
+                                    <span class="input-group-btn">
+                                        <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Aplicar cupón">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-gift"></i>Si cuenta con un código de regalo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <label for="input-voucher" class="col-sm-3 control-label">Ingrese código de regalo</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="input-voucher" @*placeholder="Enter your gift voucher code here"*@ value="" name="voucher">
+                                    <span class="input-group-btn">
+                                        <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Aplicar código">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="@Url.Action("Paso3","Compra")" class="btn btn-primary higher bold">CONTINUAR</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title"><i class="fa fa-credit-card"></i>METODO DE PAGO</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Seleccione el método que Ud. prefiera.</p>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" checked="checked" name="Contraentrega">
-                            Contra entrega
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Bank Transfer">
-                            Transferencia bancaria
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Paypal">
-                            Paypal
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title"><i class="fa fa-ticket"></i>Si cuenta con un código de cupón de descuento adicional</h4>
-                </div>
-                <div class="panel-body">
-                    <label for="input-coupon" class="col-sm-3 control-label">Ingrese código de cupón</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="input-coupon" @*placeholder="Enter your coupon here"*@ value="" name="coupon">
-                        <span class="input-group-btn">
-                            <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Aplicar cupón">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title"><i class="fa fa-gift"></i>Si cuenta con un código de regalo</h4>
-                </div>
-                <div class="panel-body">
-                    <label for="input-voucher" class="col-sm-3 control-label">Ingrese código de regalo</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="input-voucher" @*placeholder="Enter your gift voucher code here"*@ value="" name="voucher">
-                        <span class="input-group-btn">
-                            <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Aplicar código">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="@Url.Action("Paso3","Compra")" class="btn btn-primary higher bold">CONTINUAR</a>
     </div>
-</div>
-<!-- JS Part Start-->
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.dcjqaccordion.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-<!-- JS Part End-->
+    <!-- JS Part Start-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dcjqaccordion.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!-- JS Part End-->
 </body>
 </html>
